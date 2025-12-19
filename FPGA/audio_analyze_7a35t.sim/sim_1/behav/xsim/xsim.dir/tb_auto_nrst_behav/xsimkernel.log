@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_auto_nrst_behav/xsimk.exe -simmode gui -wdb tb_auto_nrst_behav.wdb -simrunnum 0 -socket 65391
+Design successfully loaded
+Design Loading Memory Usage: 8064 KB (Peak: 8064 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8684 KB (Peak: 8684 KB)
+Simulation CPU Usage: 0 ms

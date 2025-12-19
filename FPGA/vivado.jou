@@ -1,0 +1,308 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Dec 12 16:03:39 2025
+# Process ID: 236592
+# Current directory: D:/FPGA/audio_analyze_7a35t
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent236484 D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.xpr
+# Log file: D:/FPGA/audio_analyze_7a35t/vivado.log
+# Journal file: D:/FPGA/audio_analyze_7a35t\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.xpr
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_fft_freq_meter_0_0
+delete_bd_objs [get_bd_nets fft_sys_controller_0_o_frame_len]
+save_bd_design
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+set_property location {5 1883 450} [get_bd_cells xfft_0]
+update_module_reference design_1_fft_freq_meter_0_0
+connect_bd_net [get_bd_pins fft_freq_meter_0/fft_last] [get_bd_pins xfft_0/m_axis_data_tlast]
+save_bd_design
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res]
+save_bd_design
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference design_1_fft_freq_meter_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+connect_bd_net [get_bd_pins adc_to_fft_buffer_0/cfg_rst] [get_bd_pins fft_sys_controller_0/o_force_rst]
+set_property location {3.5 1580 350} [get_bd_cells adc_to_fft_buffer_0]
+disconnect_bd_net /aresetn_1 [get_bd_pins adc_to_fft_buffer_0/aresetn]
+connect_bd_net [get_bd_pins auto_nrst_0/aresetn_out] [get_bd_pins adc_to_fft_buffer_0/aresetn]
+save_bd_design
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference design_1_fft_freq_meter_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets fft_sys_controller_0_m_axis_config]
+startgroup
+set_property -dict [list CONFIG.transform_length {4096} CONFIG.implementation_options {radix_4_burst_io} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+delete_bd_objs [get_bd_nets xfft_0_m_axis_data_tlast]
+endgroup
+save_bd_design
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+close [ open D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/digital_agc.v w ]
+add_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/digital_agc.v
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference digital_agc digital_agc_0
+set_property location {3 1408 60} [get_bd_cells digital_agc_0]
+delete_bd_objs [get_bd_nets ad7606_driver_0_sample_data_out]
+connect_bd_net [get_bd_pins digital_agc_0/adc_data_in] [get_bd_pins ad7606_driver_0/sample_data_out]
+connect_bd_net [get_bd_pins digital_agc_0/adc_data_out] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_ports aclk] [get_bd_pins digital_agc_0/clk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins digital_agc_0/rst_n]
+startgroup
+make_bd_pins_external  [get_bd_pins digital_agc_0/agc_enable]
+endgroup
+update_module_reference design_1_freq_screen_driver_0_0
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_ports agc_enable_0] [get_bd_pins freq_screen_driver_0/agc_enable]
+connect_bd_net [get_bd_pins freq_screen_driver_0/current_gain] [get_bd_pins digital_agc_0/current_gain]
+save_bd_design
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -top
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 16
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+set_property IOSTANDARD LVCMOS33 [get_ports [list agc_enable_0]]
+place_ports agc_enable_0 T8
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.transform_length {4096} CONFIG.implementation_options {radix_4_burst_io} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+endgroup
+update_module_reference design_1_freq_screen_driver_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+regenerate_bd_layout
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+disconnect_bd_net /aresetn_1 [get_bd_pins ad7606_driver_0/rst_n]
+connect_bd_net [get_bd_pins ad7606_driver_0/rst_n] [get_bd_pins auto_nrst_0/aresetn_out]
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+set_property location {5 1519 322} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {6 1926 261} [get_bd_cells xfft_0]
+set_property location {3 831 112} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {2 449 359} [get_bd_cells digital_agc_0]
+set_property location {1 122 134} [get_bd_cells ad7606_driver_0]
+set_property location {2 477 157} [get_bd_cells digital_agc_0]
+set_property location {2 545 377} [get_bd_cells xlconstant_0]
+set_property location {3 916 372} [get_bd_cells xlconcat_0]
+set_property location {2 585 349} [get_bd_cells xlconcat_0]
+set_property location {1 174 378} [get_bd_cells xlconstant_0]
+set_property location {3 908 279} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {3 974 472} [get_bd_cells fft_sys_controller_0]
+set_property location {3.5 1362 245} [get_bd_cells xfft_0]
+set_property location {4 1349 556} [get_bd_cells fft_freq_meter_0]
+regenerate_bd_layout
+update_module_reference design_1_freq_screen_driver_0_0
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+update_module_reference design_1_freq_screen_driver_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [lindex [get_cfgmem_parts {n25q64-3.3v-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1
+set_property PROGRAM.FILES "D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bin" [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+endgroup
+update_module_reference design_1_freq_screen_driver_0_0
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+wait_on_run impl_1

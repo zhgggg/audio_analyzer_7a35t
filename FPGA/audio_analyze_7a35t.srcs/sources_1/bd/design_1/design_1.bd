@@ -1,0 +1,931 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8455A407EA202823",
+      "device": "xc7a35tftg256-1",
+      "name": "design_1",
+      "synth_flow_mode": "None",
+      "tool_version": "2018.3",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlconstant_0": "",
+      "xlconcat_0": "",
+      "xfft_0": "",
+      "adc_to_fft_buffer_0": "",
+      "ad7606_driver_0": "",
+      "seg_driver_0": "",
+      "fft_sys_controller_0": "",
+      "auto_nrst_0": "",
+      "fft_freq_meter_0": "",
+      "digital_agc_0": "",
+      "freq_screen_driver_0": ""
+    },
+    "ports": {
+      "aclk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "aresetn"
+          },
+          "CLK_DOMAIN": {
+            "value": "design_1_aclk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "50000000"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "aresetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "fft_valid": {
+        "direction": "O"
+      },
+      "measure_done": {
+        "direction": "O"
+      },
+      "ad_convst_0": {
+        "direction": "O"
+      },
+      "ad_reset_0": {
+        "type": "rst",
+        "direction": "O",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "ad_busy_0": {
+        "direction": "I"
+      },
+      "ad_rd_0": {
+        "direction": "O"
+      },
+      "ad_cs_0": {
+        "direction": "O"
+      },
+      "ad_data_in_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "sel": {
+        "direction": "O",
+        "left": "5",
+        "right": "0"
+      },
+      "seg": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "sw_points_0": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
+      },
+      "uart_tx_0": {
+        "direction": "O"
+      },
+      "agc_enable_0": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "design_1_xlconcat_0_0"
+      },
+      "xfft_0": {
+        "vlnv": "xilinx.com:ip:xfft:9.1",
+        "xci_name": "design_1_xfft_0_0",
+        "parameters": {
+          "aresetn": {
+            "value": "true"
+          },
+          "implementation_options": {
+            "value": "radix_4_burst_io"
+          },
+          "number_of_stages_using_block_ram_for_data_and_phase_factors": {
+            "value": "0"
+          },
+          "output_ordering": {
+            "value": "natural_order"
+          },
+          "run_time_configurable_transform_length": {
+            "value": "false"
+          },
+          "scaling_options": {
+            "value": "block_floating_point"
+          },
+          "target_clock_frequency": {
+            "value": "50"
+          },
+          "transform_length": {
+            "value": "4096"
+          }
+        }
+      },
+      "adc_to_fft_buffer_0": {
+        "vlnv": "xilinx.com:module_ref:adc_to_fft_buffer:1.0",
+        "xci_name": "design_1_adc_to_fft_buffer_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "adc_to_fft_buffer",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "4",
+                "value_src": "auto"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_tdata",
+                "direction": "O",
+                "left": "31",
+                "right": "0"
+              },
+              "TLAST": {
+                "physical_name": "m_axis_tlast",
+                "direction": "O"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_tready",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "aclk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axis",
+                "value_src": "constant"
+              },
+              "ASSOCIATED_RESET": {
+                "value": "aresetn",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "aresetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "cfg_rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "frame_length": {
+            "direction": "I",
+            "left": "12",
+            "right": "0"
+          },
+          "adc_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "32",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "adc_valid": {
+            "direction": "I"
+          }
+        }
+      },
+      "ad7606_driver_0": {
+        "vlnv": "xilinx.com:module_ref:ad7606_driver:1.0",
+        "xci_name": "design_1_ad7606_driver_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ad7606_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ad_reset": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "ad_busy": {
+            "direction": "I"
+          },
+          "ad_data_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "ad_cs": {
+            "direction": "O"
+          },
+          "ad_rd": {
+            "direction": "O"
+          },
+          "ad_convst": {
+            "direction": "O"
+          },
+          "sample_valid": {
+            "direction": "O"
+          },
+          "sample_data_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "seg_driver_0": {
+        "vlnv": "xilinx.com:module_ref:seg_driver:1.0",
+        "xci_name": "design_1_seg_driver_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "seg_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "sel": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "seg": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "fft_sys_controller_0": {
+        "vlnv": "xilinx.com:module_ref:fft_sys_controller:1.0",
+        "xci_name": "design_1_fft_sys_controller_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fft_sys_controller",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "m_axis_config": {
+            "mode": "Master",
+            "vlnv": "xilinx.com:interface:axis_rtl:1.0",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              },
+              "HAS_TKEEP": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TLAST": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "HAS_TREADY": {
+                "value": "1",
+                "value_src": "constant"
+              },
+              "HAS_TSTRB": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TDATA_NUM_BYTES": {
+                "value": "2",
+                "value_src": "constant"
+              },
+              "TDEST_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TID_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              },
+              "TUSER_WIDTH": {
+                "value": "0",
+                "value_src": "constant"
+              }
+            },
+            "port_maps": {
+              "TDATA": {
+                "physical_name": "m_axis_config_tdata",
+                "direction": "O",
+                "left": "15",
+                "right": "0"
+              },
+              "TVALID": {
+                "physical_name": "m_axis_config_tvalid",
+                "direction": "O"
+              },
+              "TREADY": {
+                "physical_name": "m_axis_config_tready",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_BUSIF": {
+                "value": "m_axis_config",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "o_force_rst": {
+            "type": "rst",
+            "direction": "O"
+          },
+          "sw_points": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "o_frame_len": {
+            "direction": "O",
+            "left": "12",
+            "right": "0"
+          }
+        }
+      },
+      "auto_nrst_0": {
+        "vlnv": "xilinx.com:module_ref:auto_nrst:1.0",
+        "xci_name": "design_1_auto_nrst_0_0",
+        "parameters": {
+          "CNT_MAX": {
+            "value": "\"0111110101111000001111111\""
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "auto_nrst",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "sys_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "sys_rst_n",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "sys_rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "aresetn_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "fft_freq_meter_0": {
+        "vlnv": "xilinx.com:module_ref:fft_freq_meter:1.0",
+        "xci_name": "design_1_fft_freq_meter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "fft_freq_meter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "cfg_rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sw_points": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "fft_valid": {
+            "direction": "I"
+          },
+          "fft_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "freq_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "measure_done": {
+            "direction": "O"
+          }
+        }
+      },
+      "digital_agc_0": {
+        "vlnv": "xilinx.com:module_ref:digital_agc:1.0",
+        "xci_name": "design_1_digital_agc_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "digital_agc",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "agc_enable": {
+            "direction": "I"
+          },
+          "adc_data_in": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "adc_data_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "current_gain": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "gain_uart_byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "freq_screen_driver_0": {
+        "vlnv": "xilinx.com:module_ref:freq_screen_driver:1.0",
+        "xci_name": "design_1_freq_screen_driver_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "freq_screen_driver",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_1_aclk",
+                "value_src": "default_prop"
+              },
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "user_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "data_in": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "agc_enable": {
+            "direction": "I"
+          },
+          "current_gain": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "uart_tx": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "adc_to_fft_buffer_0_m_axis": {
+        "interface_ports": [
+          "adc_to_fft_buffer_0/m_axis",
+          "xfft_0/S_AXIS_DATA"
+        ]
+      }
+    },
+    "nets": {
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "xlconcat_0/In1"
+        ]
+      },
+      "aclk_1": {
+        "ports": [
+          "aclk",
+          "xfft_0/aclk",
+          "adc_to_fft_buffer_0/aclk",
+          "ad7606_driver_0/clk",
+          "seg_driver_0/clk",
+          "fft_sys_controller_0/clk",
+          "auto_nrst_0/sys_clk",
+          "fft_freq_meter_0/clk",
+          "digital_agc_0/clk",
+          "freq_screen_driver_0/clk"
+        ]
+      },
+      "xfft_0_m_axis_data_tdata": {
+        "ports": [
+          "xfft_0/m_axis_data_tdata",
+          "fft_freq_meter_0/fft_data"
+        ]
+      },
+      "xfft_0_m_axis_data_tvalid": {
+        "ports": [
+          "xfft_0/m_axis_data_tvalid",
+          "fft_valid",
+          "fft_freq_meter_0/fft_valid"
+        ]
+      },
+      "fft_freq_meter_0_freq_out": {
+        "ports": [
+          "fft_freq_meter_0/freq_out",
+          "seg_driver_0/data_in",
+          "freq_screen_driver_0/data_in"
+        ]
+      },
+      "fft_freq_meter_0_measure_done": {
+        "ports": [
+          "fft_freq_meter_0/measure_done",
+          "measure_done"
+        ]
+      },
+      "ad7606_driver_0_ad_convst": {
+        "ports": [
+          "ad7606_driver_0/ad_convst",
+          "ad_convst_0"
+        ]
+      },
+      "ad7606_driver_0_ad_reset": {
+        "ports": [
+          "ad7606_driver_0/ad_reset",
+          "ad_reset_0"
+        ]
+      },
+      "ad_busy_0_1": {
+        "ports": [
+          "ad_busy_0",
+          "ad7606_driver_0/ad_busy"
+        ]
+      },
+      "ad7606_driver_0_ad_rd": {
+        "ports": [
+          "ad7606_driver_0/ad_rd",
+          "ad_rd_0"
+        ]
+      },
+      "ad7606_driver_0_ad_cs": {
+        "ports": [
+          "ad7606_driver_0/ad_cs",
+          "ad_cs_0"
+        ]
+      },
+      "ad_data_in_0_1": {
+        "ports": [
+          "ad_data_in_0",
+          "ad7606_driver_0/ad_data_in"
+        ]
+      },
+      "seg_driver_0_sel": {
+        "ports": [
+          "seg_driver_0/sel",
+          "sel"
+        ]
+      },
+      "seg_driver_0_seg": {
+        "ports": [
+          "seg_driver_0/seg",
+          "seg"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "adc_to_fft_buffer_0/adc_data"
+        ]
+      },
+      "ad7606_driver_0_sample_valid": {
+        "ports": [
+          "ad7606_driver_0/sample_valid",
+          "adc_to_fft_buffer_0/adc_valid"
+        ]
+      },
+      "sw_points_0_1": {
+        "ports": [
+          "sw_points_0",
+          "fft_sys_controller_0/sw_points",
+          "fft_freq_meter_0/sw_points"
+        ]
+      },
+      "freq_screen_driver_0_uart_tx": {
+        "ports": [
+          "freq_screen_driver_0/uart_tx",
+          "uart_tx_0"
+        ]
+      },
+      "aresetn_1": {
+        "ports": [
+          "aresetn",
+          "seg_driver_0/rst_n",
+          "auto_nrst_0/sys_rst_n",
+          "digital_agc_0/rst_n",
+          "freq_screen_driver_0/rst_n"
+        ]
+      },
+      "auto_nrst_0_aresetn_out": {
+        "ports": [
+          "auto_nrst_0/aresetn_out",
+          "fft_sys_controller_0/rst_n",
+          "xfft_0/aresetn",
+          "adc_to_fft_buffer_0/aresetn",
+          "fft_freq_meter_0/rst_n",
+          "ad7606_driver_0/rst_n"
+        ]
+      },
+      "fft_sys_controller_0_o_force_rst": {
+        "ports": [
+          "fft_sys_controller_0/o_force_rst",
+          "adc_to_fft_buffer_0/cfg_rst"
+        ]
+      },
+      "ad7606_driver_0_sample_data_out": {
+        "ports": [
+          "ad7606_driver_0/sample_data_out",
+          "digital_agc_0/adc_data_in"
+        ]
+      },
+      "digital_agc_0_adc_data_out": {
+        "ports": [
+          "digital_agc_0/adc_data_out",
+          "xlconcat_0/In0"
+        ]
+      },
+      "agc_enable_0_1": {
+        "ports": [
+          "agc_enable_0",
+          "digital_agc_0/agc_enable",
+          "freq_screen_driver_0/agc_enable"
+        ]
+      },
+      "digital_agc_0_current_gain": {
+        "ports": [
+          "digital_agc_0/current_gain",
+          "freq_screen_driver_0/current_gain"
+        ]
+      }
+    }
+  }
+}

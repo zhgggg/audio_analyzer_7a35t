@@ -1,0 +1,14 @@
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: D:/Developer/FPGA/Xilinx/Vivado/2018.3/bin/unwrapped/win64.o/xelab.exe -wto 3914c114086249d98edc172985eb95b9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_auto_nrst_behav xil_defaultlib.tb_auto_nrst xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/auto_nrst.v" Line 1. Module auto_nrst(CNT_MAX=99) doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.auto_nrst(CNT_MAX=99)
+Compiling module xil_defaultlib.tb_auto_nrst
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_auto_nrst_behav

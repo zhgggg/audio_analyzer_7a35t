@@ -1,0 +1,16 @@
+verilog xil_defaultlib  \
+"../../../bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+"../../../bd/design_1/sim/design_1.v" \
+"../../../bd/design_1/ip/design_1_fft_freq_meter_0_0/sim/design_1_fft_freq_meter_0_0.v" \
+"../../../bd/design_1/ip/design_1_ad7606_driver_0_0/sim/design_1_ad7606_driver_0_0.v" \
+"../../../bd/design_1/ip/design_1_seg_driver_0_0/sim/design_1_seg_driver_0_0.v" \
+"../../../bd/design_1/ip/design_1_adc_to_fft_buffer_0_0/sim/design_1_adc_to_fft_buffer_0_0.v" \
+"../../../bd/design_1/ip/design_1_fft_sys_controller_0_0/sim/design_1_fft_sys_controller_0_0.v" \
+"../../../bd/design_1/ip/design_1_freq_screen_driver_0_0/sim/design_1_freq_screen_driver_0_0.v" \
+"../../../bd/design_1/ip/design_1_auto_nrst_0_0/sim/design_1_auto_nrst_0_0.v" \
+"../../../bd/design_1/ip/design_1_digital_agc_0_0/sim/design_1_digital_agc_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

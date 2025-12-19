@@ -1,0 +1,1607 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Dec 12 16:03:39 2025
+# Process ID: 236592
+# Current directory: D:/FPGA/audio_analyze_7a35t
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent236484 D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.xpr
+# Log file: D:/FPGA/audio_analyze_7a35t/vivado.log
+# Journal file: D:/FPGA/audio_analyze_7a35t\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Developer/FPGA/Xilinx/Vivado/2018.3/data/ip'.
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  7 2018-00:40:27
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/C1234567A
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:xfft:9.1 - xfft_0
+Adding cell -- xilinx.com:module_ref:adc_to_fft_buffer:1.0 - adc_to_fft_buffer_0
+Adding cell -- xilinx.com:module_ref:ad7606_driver:1.0 - ad7606_driver_0
+Adding cell -- xilinx.com:module_ref:seg_driver:1.0 - seg_driver_0
+Adding cell -- xilinx.com:module_ref:fft_freq_meter:1.0 - fft_freq_meter_0
+Adding cell -- xilinx.com:module_ref:freq_screen_driver:1.0 - freq_screen_driver_0
+Adding cell -- xilinx.com:module_ref:fft_sys_controller:1.0 - fft_sys_controller_0
+Adding cell -- xilinx.com:module_ref:auto_nrst:1.0 - auto_nrst_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_sys_controller_0/rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_freq_meter_0/rst_n(rst)
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /xfft_0/aresetn(rst)
+Successfully read diagram <design_1> from BD file <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd>
+update_module_reference design_1_fft_freq_meter_0_0
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'cfg_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_fft_freq_meter_0_0 from fft_freq_meter_v1_0 1.0 to fft_freq_meter_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_freq_meter_0_upgraded_ipi/rst_n(rst)
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+delete_bd_objs [get_bd_nets fft_sys_controller_0_o_frame_len]
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_CONFIG(1) and /fft_sys_controller_0/m_axis_config(2)
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_to_fft_buffer_0/frame_length
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 16:10:34 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 16:10:34 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+set_property location {5 1883 450} [get_bd_cells xfft_0]
+update_module_reference design_1_fft_freq_meter_0_0
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'cfg_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_fft_freq_meter_0_0 from fft_freq_meter_v1_0 1.0 to fft_freq_meter_v1_0 1.0
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'fft_last'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_fft_freq_meter_0_0'. These changes may impact your design.
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_freq_meter_0_upgraded_ipi/rst_n(rst)
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_fft_freq_meter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+connect_bd_net [get_bd_pins fft_freq_meter_0/fft_last] [get_bd_pins xfft_0/m_axis_data_tlast]
+WARNING: [BD 41-1306] The connection to interface pin /xfft_0/m_axis_data_tlast is being overridden by the user. This pin will not be connected as a part of interface connection M_AXIS_DATA
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_CONFIG(1) and /fft_sys_controller_0/m_axis_config(2)
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_to_fft_buffer_0/frame_length
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 16:24:47 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 16:24:47 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_nets util_vector_logic_0_Res]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_CONFIG(1) and /fft_sys_controller_0/m_axis_config(2)
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_to_fft_buffer_0/cfg_rst
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 16:33:54 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 16:33:54 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_fft_freq_meter_0_0
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'cfg_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_fft_freq_meter_0_0 from fft_freq_meter_v1_0 1.0 to fft_freq_meter_v1_0 1.0
+WARNING: [IP_Flow 19-4700] Upgrade has removed port 'fft_last'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_fft_freq_meter_0_0'. These changes may impact your design.
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_freq_meter_0_upgraded_ipi/rst_n(rst)
+CRITICAL WARNING: [BD 41-1167] The pin 'fft_last' is not found on the upgraded version of the cell '/fft_freq_meter_0'. Its connection to the net 'xfft_0_m_axis_data_tlast' has been removed.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_fft_freq_meter_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_CONFIG(1) and /fft_sys_controller_0/m_axis_config(2)
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_to_fft_buffer_0/cfg_rst
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 16:41:32 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 16:41:32 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+connect_bd_net [get_bd_pins adc_to_fft_buffer_0/cfg_rst] [get_bd_pins fft_sys_controller_0/o_force_rst]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+set_property location {3.5 1580 350} [get_bd_cells adc_to_fft_buffer_0]
+disconnect_bd_net /aresetn_1 [get_bd_pins adc_to_fft_buffer_0/aresetn]
+connect_bd_net [get_bd_pins auto_nrst_0/aresetn_out] [get_bd_pins adc_to_fft_buffer_0/aresetn]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /adc_to_fft_buffer_0/aresetn(rst)
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_fft_freq_meter_0_0
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+INFO: [IP_Flow 19-5107] Inferred bus interface 'cfg_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_fft_freq_meter_0_0 from fft_freq_meter_v1_0 1.0 to fft_freq_meter_v1_0 1.0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /fft_freq_meter_0_upgraded_ipi/rst_n(rst)
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+CRITICAL WARNING: [BD 41-237] Bus Interface property TDATA_NUM_BYTES does not match between /xfft_0/S_AXIS_CONFIG(1) and /fft_sys_controller_0/m_axis_config(2)
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+WARNING: [BD 41-235] Width mismatch when connecting pin: '/xfft_0/s_axis_config_tdata'(8) to net 'fft_sys_controller_0_m_axis_config_TDATA'(16) - Only lower order bits will be connected.
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+[Fri Dec 12 16:59:37 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 16:59:37 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets fft_sys_controller_0_m_axis_config]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+startgroup
+set_property -dict [list CONFIG.transform_length {4096} CONFIG.implementation_options {radix_4_burst_io} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+delete_bd_objs [get_bd_nets xfft_0_m_axis_data_tlast]
+endgroup
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 17:11:46 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 17:11:46 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+close [ open D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/digital_agc.v w ]
+add_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/digital_agc.v
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+update_compile_order -fileset sources_1
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+create_bd_cell -type module -reference digital_agc digital_agc_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property location {3 1408 60} [get_bd_cells digital_agc_0]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+delete_bd_objs [get_bd_nets ad7606_driver_0_sample_data_out]
+connect_bd_net [get_bd_pins digital_agc_0/adc_data_in] [get_bd_pins ad7606_driver_0/sample_data_out]
+connect_bd_net [get_bd_pins digital_agc_0/adc_data_out] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_ports aclk] [get_bd_pins digital_agc_0/clk]
+connect_bd_net [get_bd_ports aresetn] [get_bd_pins digital_agc_0/rst_n]
+startgroup
+make_bd_pins_external  [get_bd_pins digital_agc_0/agc_enable]
+endgroup
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'agc_enable'
+WARNING: [IP_Flow 19-4698] Upgrade has added port 'current_gain'
+WARNING: [IP_Flow 19-3298] Detected external port differences while upgrading 'design_1_freq_screen_driver_0_0'. These changes may impact your design.
+CRITICAL WARNING: [Coretcl 2-1280] The upgrade of 'design_1_freq_screen_driver_0_0' has identified issues that may require user intervention. Please verify that the instance is correctly configured, and review any upgrade messages.
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+update_compile_order -fileset sources_1
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+connect_bd_net [get_bd_ports agc_enable_0] [get_bd_pins freq_screen_driver_0/agc_enable]
+connect_bd_net [get_bd_pins freq_screen_driver_0/current_gain] [get_bd_pins digital_agc_0/current_gain]
+save_bd_design
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+regenerate_bd_layout
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+make_wrapper -files [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -top
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+INFO: [BD 41-1662] The design 'design_1.bd' is already validated. Therefore parameter propagation will not be re-run.
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [HDL 9-3756] overwriting previous definition of module 'uart_byte_tx_internal' [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v:123]
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs synth_1 -jobs 16
+[Fri Dec 12 17:50:50 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a35tftg256-1
+INFO: [Netlist 29-17] Analyzing 573 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7a35tftg256-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc]
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[2]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'fft_size_cfg[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:2]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:2]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[10]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:3]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:3]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_convst'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:4]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:4]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[9]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:5]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:5]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_rd'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[6]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[15]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[3]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[14]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[13]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[7]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[4]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[12]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_cs'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'fft_size_cfg[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_reset'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[5]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[8]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[11]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst_n'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_busy'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_convst'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_rd'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_cs'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_reset'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_convst'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_rd'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_cs'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_reset'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_busy'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_convst'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_cs'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[2]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[3]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[4]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[5]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[6]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[7]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[8]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[9]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[10]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[11]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[12]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[13]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[14]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_data_in[15]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_rd'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ad_reset'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'clk'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'fft_size_cfg[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'fft_size_cfg[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'rst_n'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF_BUFG'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:59]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:59]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[2]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[3]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[4]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[5]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[6]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[7]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[8]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[9]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[10]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[11]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[12]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[13]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[14]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'sample_data[15]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:60]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[2]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[3]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[4]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[5]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[6]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[7]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[8]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[9]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[10]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[11]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[12]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[13]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[14]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'peak_freq_hz[15]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:61]
+WARNING: [Vivado 12-507] No nets matched 'fft_size_cfg_IBUF[0]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'fft_size_cfg_IBUF[1]'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:62]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:62]
+WARNING: [Vivado 12-507] No nets matched 'u_freq_analyzer/analysis_done'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:63]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:63]
+WARNING: [Vivado 12-507] No nets matched 'freq_valid'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:64]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'u_ila_0' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:64]
+WARNING: [Vivado 12-507] No nets matched 'clk_IBUF_BUFG'. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:65]
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'dbg_hub' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:65]
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:194]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:194]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:195]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:195]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-750] There are no ChipScope debug cores in this design. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:196]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:196]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Vivado 12-1419] Debug core 'dbg_hub' was not found. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc:197]
+Finished Parsing XDC File [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/constrs_1/new/test_clk.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2721.516 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:05 ; elapsed = 00:00:21 . Memory (MB): peak = 2912.758 ; gain = 417.305
+set_property IOSTANDARD LVCMOS33 [get_ports [list agc_enable_0]]
+place_ports agc_enable_0 T8
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3330.312 ; gain = 0.000
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 3330.312 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 3330.312 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 3334.699 ; gain = 0.000
+[Fri Dec 12 17:56:11 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+set_property -dict [list CONFIG.transform_length {4096} CONFIG.implementation_options {radix_4_burst_io} CONFIG.number_of_stages_using_block_ram_for_data_and_phase_factors {0}] [get_bd_cells xfft_0]
+endgroup
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 18:02:35 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 18:02:35 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 18:19:18 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 18:19:18 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 18:28:58 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 18:28:58 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+regenerate_bd_layout
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd}
+disconnect_bd_net /aresetn_1 [get_bd_pins ad7606_driver_0/rst_n]
+connect_bd_net [get_bd_pins ad7606_driver_0/rst_n] [get_bd_pins auto_nrst_0/aresetn_out]
+WARNING: [BD 41-1731] Type mismatch between connected pins: /auto_nrst_0/aresetn_out(undef) and /ad7606_driver_0/rst_n(rst)
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+set_property location {5 1519 322} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {6 1926 261} [get_bd_cells xfft_0]
+set_property location {3 831 112} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {2 449 359} [get_bd_cells digital_agc_0]
+set_property location {1 122 134} [get_bd_cells ad7606_driver_0]
+set_property location {2 477 157} [get_bd_cells digital_agc_0]
+set_property location {2 545 377} [get_bd_cells xlconstant_0]
+set_property location {3 916 372} [get_bd_cells xlconcat_0]
+set_property location {2 585 349} [get_bd_cells xlconcat_0]
+set_property location {1 174 378} [get_bd_cells xlconstant_0]
+set_property location {3 908 279} [get_bd_cells adc_to_fft_buffer_0]
+set_property location {3 974 472} [get_bd_cells fft_sys_controller_0]
+set_property location {3.5 1362 245} [get_bd_cells xfft_0]
+set_property location {4 1349 556} [get_bd_cells fft_freq_meter_0]
+regenerate_bd_layout
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+Wrote  : <D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/ui/bd_1f5defd0.ui> 
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 18:47:35 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 18:47:35 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 18:56:30 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 18:56:30 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 3841.582 ; gain = 0.000
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 19:06:59 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 19:06:59 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Dec 12 19:15:41 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Fri Dec 12 19:15:41 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+create_hw_cfgmem -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [lindex [get_cfgmem_parts {n25q64-3.3v-spi-x1_x2_x4}] 0]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property STEPS.WRITE_BITSTREAM.ARGS.BIN_FILE true [get_runs impl_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/freq_screen_driver.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/digital_agc.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+[Fri Dec 12 19:22:41 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+set_property PROGRAM.FILES "D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bin" [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROGRAM.ADDRESS_RANGE  {use_file} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.FILES [list "D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/design_1_wrapper.bin" ] [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.PRM_FILE {} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.UNUSED_PIN_TERMINATION {pull-none} [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.BLANK_CHECK  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.ERASE  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CFG_PROGRAM  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.VERIFY  1 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+set_property PROGRAM.CHECKSUM  0 [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+startgroup 
+create_hw_bitstream -hw_device [lindex [get_hw_devices xc7a35t_0] 0] [get_property PROGRAM.HW_CFGMEM_BITFILE [ lindex [get_hw_devices xc7a35t_0] 0]]; program_hw_devices [lindex [get_hw_devices xc7a35t_0] 0]; refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0];
+INFO: [Labtools 27-3164] End of startup status: HIGH
+INFO: [Labtools 27-2302] Device xc7a35t (JTAG device index = 0) is programmed with a design that has 1 SPI core(s).
+program_hw_cfgmem -hw_cfgmem [ get_property PROGRAM.HW_CFGMEM [lindex [get_hw_devices xc7a35t_0] 0]]
+Mfg ID : 20   Memory Type : ba   Memory Capacity : 17   Device ID 1 : 0   Device ID 2 : 0
+Performing Erase Operation...
+Erase Operation successful.
+Performing Program and Verify Operations...
+Program/Verify Operation successful.
+INFO: [Labtoolstcl 44-377] Flash programming completed successfully
+program_hw_cfgmem: Time (s): cpu = 00:00:00 ; elapsed = 00:01:05 . Memory (MB): peak = 3886.012 ; gain = 0.000
+endgroup
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/C1234567A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/C1234567A
+INFO: [Labtools 27-1435] Device xc7a35t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/C1234567A
+update_module_reference design_1_freq_screen_driver_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_1_freq_screen_driver_0_0 from freq_screen_driver_v1_0 1.0 to freq_screen_driver_v1_0 1.0
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+generate_target all [get_files  D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd]
+WARNING: [BD 41-927] Following properties on pin /adc_to_fft_buffer_0/aclk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /ad7606_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /seg_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_sys_controller_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /auto_nrst_0/sys_clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /fft_freq_meter_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /digital_agc_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+WARNING: [BD 41-927] Following properties on pin /freq_screen_driver_0/clk have been updated from connected ip. They may not be synchronized with cell properties. You can set property on pin directly to confirm the value and resolve the warning.
+	CLK_DOMAIN=design_1_aclk 
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
+Please check your design and connect them as needed: 
+/xfft_0/s_axis_config_tvalid
+/adc_to_fft_buffer_0/frame_length
+/fft_freq_meter_0/cfg_rst
+
+Wrote  : <D:\FPGA\audio_analyze_7a35t\audio_analyze_7a35t.srcs\sources_1\bd\design_1\design_1.bd> 
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/sim/design_1.v
+VHDL Output written to : D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xfft_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_freq_meter_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ad7606_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block seg_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block adc_to_fft_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block fft_sys_controller_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block freq_screen_driver_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block auto_nrst_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block digital_agc_0 .
+Exporting to file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1.hwh
+Generated Block Design Tcl file D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/hw_handoff/design_1_bd.tcl
+Generated Hardware Definition File D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/synth/design_1.hwdef
+export_ip_user_files -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/bd/design_1/design_1.bd] -directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/sim_scripts -ip_user_files_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files -ipstatic_source_dir D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/modelsim} {questa=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/questa} {riviera=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/riviera} {activehdl=D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 16
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Dec 14 16:34:35 2025] Launched synth_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/synth_1/runme.log
+[Sun Dec 14 16:34:35 2025] Launched impl_1...
+Run output will be captured here: D:/FPGA/audio_analyze_7a35t/audio_analyze_7a35t.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 14 16:38:55 2025...

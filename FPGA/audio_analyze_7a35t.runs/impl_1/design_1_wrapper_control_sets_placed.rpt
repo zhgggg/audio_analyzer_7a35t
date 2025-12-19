@@ -1,0 +1,129 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Dec 17 09:36:17 2025
+| Host         : zhg213 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7a35t
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    53 |
+| Unused register locations in slices containing registers |   180 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            7 |
+|      2 |            2 |
+|      4 |            4 |
+|      5 |            1 |
+|      6 |            1 |
+|      7 |            2 |
+|      8 |            1 |
+|     10 |            2 |
+|     11 |            2 |
+|     12 |            2 |
+|     13 |            2 |
+|     14 |            2 |
+|    16+ |           25 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              94 |           28 |
+| No           | No                    | Yes                    |             188 |           59 |
+| No           | Yes                   | No                     |              38 |           16 |
+| Yes          | No                    | No                     |            2168 |          509 |
+| Yes          | No                    | Yes                    |             358 |          111 |
+| Yes          | Yes                   | No                     |             150 |           42 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|   Clock Signal  |                                                                            Enable Signal                                                                            |                                                           Set/Reset Signal                                                          | Slice Load Count | Bel Load Count |
++-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+|  aclk_IBUF_BUFG | design_1_i/fft_freq_meter_0/inst/measure_done_i_1_n_2049                                                                                                            | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/latch_en                                                                                                                       | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/ad_rd_i_1_n_2049                                                                                                                    | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/ad_cs_i_1_n_2049                                                                                                                    | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/FSM_onehot_state_reg_n_2049_[3]                                                                                                     | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/FSM_onehot_state_reg_n_2049_[1]                                                                                                     | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/uart_tx_i_1_n_2049                                                                                                 | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                1 |              1 |
+|  aclk_IBUF_BUFG | design_1_i/fft_sys_controller_0/inst/last_sw_stable_0                                                                                                               | design_1_i/fft_sys_controller_0/inst/m_axis_config_tdata[8]_i_2_n_2049                                                              |                1 |              2 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/shift_reg                                                                                                          | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn_0                                                                          |                1 |              2 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |                4 |              4 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                4 |              4 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/pe_cnt/ce_rank_0                                                         | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/process_state_s                          |                2 |              4 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/shift_cnt_reg[5][0]                                                                                                | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn_0                                                                          |                2 |              4 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/state_reg[0][0]                                                                                                    | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                3 |              5 |
+|  aclk_IBUF_BUFG | design_1_i/digital_agc_0/inst/current_gain[3]_i_1_n_2049                                                                                                            | design_1_i/digital_agc_0/inst/adc_data_out[15]_i_2_n_2049                                                                           |                1 |              6 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/processing_state/ce_pedelay                                              | design_1_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                   |                3 |              7 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | design_1_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                   |                2 |              7 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/E[0]                                                                                                               |                                                                                                                                     |                5 |              8 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | design_1_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                              |                4 |             10 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/FSM_onehot_state[9]_i_1_n_2049                                                                                                      | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                2 |             10 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/shift_reg                                                                                                          | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                4 |             11 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/processing_state/gen_ce_non_real_time.ce_predicted_reg                   | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/loading_state/sclr_or_nfft_we_or_loading |                4 |             11 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/symbols_out_remaining[11]_i_1_n_2049                                                                                       | design_1_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                              |                2 |             12 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                5 |             12 |
+|  aclk_IBUF_BUFG | design_1_i/fft_freq_meter_0/inst/cnt                                                                                                                                | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |                4 |             13 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/sample_valid                                                                                                                        | design_1_i/adc_to_fft_buffer_0/inst/mem_reg_3_i_2_n_2049                                                                            |                4 |             13 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/xk_index_counter_ce                                                                                                        | design_1_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                   |                5 |             14 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/control/loading_state/xn_index_counter_ce                                        | design_1_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                   |                4 |             14 |
+|  aclk_IBUF_BUFG | design_1_i/digital_agc_0/inst/max_peak[15]_i_1_n_2049                                                                                                               | design_1_i/digital_agc_0/inst/adc_data_out[15]_i_2_n_2049                                                                           |               10 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/FSM_onehot_state_reg_n_2049_[9]                                                                                                     | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                6 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/ad7606_driver_0/inst/reset_cnt[15]_i_1_n_2049                                                                                                            | design_1_i/ad7606_driver_0/inst/ad_cs_i_2_n_2049                                                                                    |                3 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                                          |                                                                                                                                     |                2 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_1_reg[0]   | design_1_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                              |                2 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_1_reg_0[0] | design_1_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                              |                2 |             16 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/gap_cnt[0]_i_1_n_2049                                                                                                          | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                5 |             19 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/seg_driver_0/inst/scan_cnt[15]_i_2_n_2049                                                                                |                5 |             19 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/auto_nrst_0/inst/aresetn_out_i_2_n_2049                                                                                  |                7 |             26 |
+|  aclk_IBUF_BUFG | design_1_i/fft_freq_meter_0/inst/refresh_cnt_0                                                                                                                      | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |                6 |             26 |
+|  aclk_IBUF_BUFG | design_1_i/adc_to_fft_buffer_0/inst/rd_ptr_rep[12]_i_1_n_2049                                                                                                       | design_1_i/adc_to_fft_buffer_0/inst/mem_reg_3_i_2_n_2049                                                                            |                8 |             26 |
+|  aclk_IBUF_BUFG | design_1_i/fft_freq_meter_0/inst/freq_out[26]_i_1_n_2049                                                                                                            | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |                8 |             27 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/fft_sys_controller_0/inst/m_axis_config_tdata[8]_i_2_n_2049                                                              |                8 |             29 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/latch_en                                                                                                                       | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn_0                                                                          |               11 |             31 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/u_uart_core/baud_cnt[31]_i_1_n_2049                                                                                            | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                8 |             32 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/data_out_fifo_write                                                                                       |                                                                                                                                     |                4 |             32 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/shift_cnt                                                                                                                      | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn_0                                                                          |                8 |             32 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn_0                                                                          |               10 |             35 |
+|  aclk_IBUF_BUFG | design_1_i/freq_screen_driver_0/inst/shift_cnt                                                                                                                      | design_1_i/freq_screen_driver_0/inst/u_uart_core/aresetn                                                                            |                7 |             38 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                              |               16 |             38 |
+|  aclk_IBUF_BUFG | design_1_i/fft_freq_meter_0/inst/peak_idx                                                                                                                           | design_1_i/fft_freq_meter_0/inst/aresetn_out_reg                                                                                    |               14 |             45 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     | design_1_i/digital_agc_0/inst/adc_data_out[15]_i_2_n_2049                                                                           |               16 |             59 |
+|  aclk_IBUF_BUFG |                                                                                                                                                                     |                                                                                                                                     |               28 |             94 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_b.xfft_inst/control/delay_line_for_rd_en_process/i_sw_en                                             |                                                                                                                                     |               42 |            128 |
+|  aclk_IBUF_BUFG | design_1_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     |                                                                                                                                     |              462 |           2312 |
++-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+
+
+

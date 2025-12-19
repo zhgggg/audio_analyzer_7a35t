@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/fft_freq_meter.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/ad7606_driver.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/seg_driver.v" \
+"../../../../../数电作业存档/audio_analyze_7a35t/audio_analyze_7a35t.srcs/sources_1/new/adc_to_fft_buffer.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/fft_configor.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/freq_to_uart.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/freq_screen_driver.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/periodic_rst_gen.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_xlconstant_0_0/sim/design_1_xlconstant_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_xlconcat_0_0/sim/design_1_xlconcat_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/sim/design_1.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_fft_freq_meter_0_0/sim/design_1_fft_freq_meter_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_ad7606_driver_0_0/sim/design_1_ad7606_driver_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_seg_driver_0_0/sim/design_1_seg_driver_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_adc_to_fft_buffer_0_0/sim/design_1_adc_to_fft_buffer_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_fft_sys_controller_0_0/sim/design_1_fft_sys_controller_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_freq_screen_driver_0_0/sim/design_1_freq_screen_driver_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_periodic_rst_gen_0_0/sim/design_1_periodic_rst_gen_0_0.v" \
+"../../../../audio_analyze_7a35t.ip_user_files/bd/design_1/ip/design_1_util_vector_logic_0_1/sim/design_1_util_vector_logic_0_1.v" \
+"../../../../audio_analyze_7a35t.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v" \
+"../../../../audio_analyze_7a35t.srcs/sim_1/new/tb_fft_sys.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,60 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port fft_valid -pg 1 -y 770 -defaultsOSRD
+preplace port ad_cs_0 -pg 1 -y 20 -defaultsOSRD -left
+preplace port ad_convst_0 -pg 1 -y 280 -defaultsOSRD -left
+preplace port ad_reset_0 -pg 1 -y 260 -defaultsOSRD -left
+preplace port ad_rd_0 -pg 1 -y 40 -defaultsOSRD -left
+preplace port ad_busy_0 -pg 1 -y 160 -defaultsOSRD
+preplace port measure_done -pg 1 -y 660 -defaultsOSRD
+preplace port uart_tx_0 -pg 1 -y 170 -defaultsOSRD
+preplace port aclk -pg 1 -y 530 -defaultsOSRD
+preplace port agc_enable_0 -pg 1 -y 300 -defaultsOSRD
+preplace port aresetn -pg 1 -y 550 -defaultsOSRD
+preplace portBus ad_data_in_0 -pg 1 -y 180 -defaultsOSRD
+preplace portBus sw_points_0 -pg 1 -y 510 -defaultsOSRD
+preplace portBus seg -pg 1 -y 340 -defaultsOSRD
+preplace portBus sel -pg 1 -y 320 -defaultsOSRD
+preplace inst freq_screen_driver_0 -pg 1 -lvl 7 -y 170 -defaultsOSRD
+preplace inst auto_nrst_0 -pg 1 -lvl 1 -y 600 -defaultsOSRD
+preplace inst seg_driver_0 -pg 1 -lvl 7 -y 330 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -y 440 -defaultsOSRD
+preplace inst fft_freq_meter_0 -pg 1 -lvl 6 -y 650 -defaultsOSRD
+preplace inst fft_sys_controller_0 -pg 1 -lvl 4 -y 560 -defaultsOSRD
+preplace inst ad7606_driver_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 4 -y 430 -defaultsOSRD
+preplace inst xfft_0 -pg 1 -lvl 6 -y 950 -defaultsOSRD
+preplace inst digital_agc_0 -pg 1 -lvl 3 -y 310 -defaultsOSRD
+preplace inst adc_to_fft_buffer_0 -pg 1 -lvl 5 -y 960 -defaultsOSRD
+preplace netloc ad7606_driver_0_ad_cs 1 0 3 NJ 20 NJ 20 680
+preplace netloc ad7606_driver_0_sample_data_out 1 2 1 660
+preplace netloc agc_enable_0_1 1 0 7 NJ 300 NJ 300 670 190 NJ 190 NJ 190 NJ 190 NJ
+preplace netloc adc_to_fft_buffer_0_m_axis 1 5 1 1730
+preplace netloc auto_nrst_0_aresetn_out 1 1 5 280 560 NJ 560 1060 650 1420 650 1750
+preplace netloc freq_screen_driver_0_uart_tx 1 7 1 NJ
+preplace netloc ad_data_in_0_1 1 0 2 NJ 180 NJ
+preplace netloc ad7606_driver_0_ad_rd 1 0 3 NJ 40 NJ 40 640
+preplace netloc fft_freq_meter_0_measure_done 1 6 2 NJ 660 NJ
+preplace netloc seg_driver_0_seg 1 7 1 NJ
+preplace netloc ad7606_driver_0_sample_valid 1 2 3 NJ 180 NJ 180 1410
+preplace netloc xlconcat_0_dout 1 4 1 1400
+preplace netloc xfft_0_m_axis_data_tdata 1 5 2 1770 760 2140
+preplace netloc xlconstant_0_dout 1 3 1 NJ
+preplace netloc fft_sys_controller_0_o_force_rst 1 4 1 1390
+preplace netloc ad7606_driver_0_ad_reset 1 0 3 NJ 260 NJ 260 650
+preplace netloc aresetn_1 1 0 7 20 500 NJ 500 680 500 1070J 350 NJ 350 NJ 350 2140
+preplace netloc ad_busy_0_1 1 0 2 NJ 160 NJ
+preplace netloc fft_freq_meter_0_freq_out 1 6 1 2160
+preplace netloc xfft_0_m_axis_data_tvalid 1 5 3 1760 770 2150 770 NJ
+preplace netloc seg_driver_0_sel 1 7 1 NJ
+preplace netloc ad7606_driver_0_ad_convst 1 0 3 NJ 280 NJ 280 640
+preplace netloc digital_agc_0_adc_data_out 1 3 1 1050
+preplace netloc aclk_1 1 0 7 10 270 270 270 680 220 1060 360 1430 360 1740 310 2150
+preplace netloc digital_agc_0_current_gain 1 3 4 1040 210 NJ 210 NJ 210 NJ
+preplace netloc sw_points_0_1 1 0 6 NJ 510 NJ 510 NJ 510 1040 640 NJ 640 N
+levelinfo -pg 1 -10 150 470 870 1240 1590 1960 2300 2460 -top 0 -bot 1130
+"
+}
+0

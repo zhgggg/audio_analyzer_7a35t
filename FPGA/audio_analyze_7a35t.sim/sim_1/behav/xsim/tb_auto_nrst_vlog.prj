@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../audio_analyze_7a35t.srcs/sources_1/new/auto_nrst.v" \
+"../../../../audio_analyze_7a35t.srcs/sim_1/new/tb_auto_nrst.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
